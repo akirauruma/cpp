@@ -24,32 +24,32 @@
 + **Класс** - это структура, которая содержит данные (поля) и методы для работы с этими данными.
 + Пример:
     ```cpp
-class Point{
-    public:
-        int x = 0;
-        int y = 0;
-        void printPoint(){
-            cout << "(" << x << ", " << y << ")" << endl;
-        }
-        int getX() {
-            return this->x;
+        class Point{
+            public:
+                int x = 0;
+                int y = 0;
+                void printPoint(){
+                    cout << "(" << x << ", " << y << ")" << endl;
+                }
+                int getX() {
+                    return this->x;
+                };
+                int getY(){
+                    return this->y;
+                }
+                Point(int x_value, int y_value){
+                    x = x_value;
+                    y = y_value;
+                }
         };
-        int getY(){
-            return this->y;
+        
+        int main(){
+            Point p(12, 10);
+            p.printPoint(); // (12, 10)
+            cout << "(" << p.getX() << ", " << p.getY() << ")" << endl; // (12, 10)
+            cout << "(" << p.x << ", " << p.y << ")" << endl; // (12, 10)
+            return 0;
         }
-        Point(int x_value, int y_value){
-            x = x_value;
-            y = y_value;
-        }
-};
-
-int main(){
-    Point p(12, 10);
-    p.printPoint(); // (12, 10)
-    cout << "(" << p.getX() << ", " << p.getY() << ")" << endl; // (12, 10)
-    cout << "(" << p.x << ", " << p.y << ")" << endl; // (12, 10)
-    return 0;
-}
     ```
 
 ### Конструкторы 
